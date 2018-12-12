@@ -19,16 +19,16 @@ D=unique(D(w,:),'rows');
 fprintf(' %d cases to run.\n',size(D,1));
 
 % Run first part of sample set
-D=D(1:ceil(size(D,1)/8),:);
-fprintf(' %d cases to run.\n',size(D,1));
+%D=D(1:ceil(size(D,1)/8),:);
+%fprintf(' %d cases to run.\n',size(D,1));
 
 % % Run second part of sample set
 %D=D((ceil(size(D,1)/8)+1):((2*ceil(size(D,1)/8))),:);
 %fprintf(' %d cases to run.\n',size(D,1));
 %
 % % Run third part of sample set
-%D=D((2*ceil(size(D,1)/8)+1):((3*ceil(size(D,1)/8))),:);
-%fprintf(' %d cases to run.\n',size(D,1));
+D=D((2*ceil(size(D,1)/8)+1):((3*ceil(size(D,1)/8))),:);
+fprintf(' %d cases to run.\n',size(D,1));
 %
 % % Run fourth part of sample set
 %D=D((3*ceil(size(D,1)/8)+1):((4*ceil(size(D,1)/8))),:);
@@ -238,5 +238,5 @@ for i=1:size(D,1)
 end
 
 
-csvwrite('Level3_RO2_REML200part1Block_11Dec2018.csv', MC_history);
+csvwrite('Level3_RO2_REML200part3Block_11Dec2018.csv', MC_history);
 
